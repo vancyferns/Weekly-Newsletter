@@ -1,15 +1,9 @@
-             <div>
-               <h1>{{book['title']}}</h1>
-            </div>
-           <div>
-             <img src="{{book['image']}}" alt="{{book['title']}}" width="400px"; height: 300px;">
-           </div>
-            <br>
-           <div>
-              <h3 style="color: rgb(120, 120, 120);">Author: {{book['author']}}</h3>
-           </div>
-            <br>
-            <div>
-               <b>Description: </b>{{book['description']}}
-            </div>
-            <br>
+<div class="book-card">
+  <h1>{{ book['title'] }}</h1>
+   <br>
+  <img src="{{ book['image'] }}" alt="{{ book['title'] }}">
+
+  <h2 class="book-author">Author: {{ book['author'] }}</h2>
+   <br>
+  <p><b>Description:</b> {{ book['description'] }}</p>
+</div>

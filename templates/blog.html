@@ -212,7 +212,60 @@
       color: #222;
       text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
       margin-bottom: 20px;
+    
     }
+
+    .book-card {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: #f9f9f9;
+    }
+
+    .book-card img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .book-author {
+      color: #777;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .book-card {
+        padding: 15px;
+      }
+
+      .book-card h1 {
+        font-size: 20px;
+      }
+
+      .book-card img {
+        max-width: 90%;
+        height: auto;
+      }
+
+      .book-card p {
+        font-size: 14px;
+      }
+
+      .book-author {
+        font-size: 14px;
+      }
+    }
+
+
+
+    
 
   </style>
 </head>
@@ -487,8 +540,9 @@
         
 
     <!-- Books Section in book template-->
-      <div id="books" class="section" style="background-color:white">
+      <div id="books" class="section">
          <h2 class="subtitles">BOOKS</h2>
+        <br>
          <p align="center"> Here's some of the top  books that you may not want to miss.</p>
          <br>
          <div align="center">
