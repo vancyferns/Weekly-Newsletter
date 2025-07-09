@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Becoming League</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    p
+    {
+        font-size: 120%;
+    }
+
+    .roboto-header {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 150%
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      min-height: 100vh;
+      margin: 20px auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                  0 6px 20px rgba(0, 0, 0, 0.19);
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        width: 80%;
+      }
+    }
+
+    .header {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background-color: #222;
+    }
+
+    .navbar a {
+      font-size: 120%;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .subtitles {
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      font-size: 200%;
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    #join {
+      padding: 20px;
+      text-align: center;
+    }
+
+    #join p {
+      margin-bottom: 15px;
+    }
+
+    #subscribeForm input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #subscribeBtn {
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #subscribeBtn.clicked {
+      background-color: grey;
+      cursor: default;
+    }
+
+    #successMessage {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 767px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .header,
+      footer {
+        margin: 0;
+      }
+
+        .navbar {
+          flex-direction: row; 
+          flex-wrap: wrap;    
+          justify-content: center;
+          gap: 15px;
+          padding: 10px;
+        }
+  
+
+      .content img {
+        max-height: 250px;
+      }
+
+      #post1 {
+        width: 100%;
+        margin: 0;
+      }
+
+      #post1 > div {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 10px !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box;
+      }
+
+      .section {
+        padding: 15px;
+      }
+
+      #join input[type="email"] {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+
+      #subscribeBtn {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    #join p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 140%;
+      font-weight: 600;
+      color: #222;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header roboto-header">
+      <h1>The Becoming League</h1>
+    </div>
+
+    <hr />
+
+    <!-- Navigation -->
+    <div class="navbar">
+      <a href="#about">About</a>
+      <a href="#posts">Posts</a>
+      <a href="#join">Join Now</a>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="content">
+      <img src="static/rashtravardhan-kataria-P0ORu93aMF0-unsplash.jpg" alt="quote image">
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section" style="margin-top:0 px">
+      <h2 class="subtitles">ABOUT</h2>
+      <h2 style="margin-top: 15px;text-align: center;">Welcome to The Becoming League</h2>
+      <p style="margin-top: 10px;text-align: center">
+        A community dedicated to helping individuals achieve their personal and professional goals. 
+        Our platform is designed to connect like-minded individuals who are committed to continuous growth and self-improvement.
+      </p>
+    </div>
+
+    <!-- Posts Section -->
+    <div id="posts" class="section">
+      <h2 class="subtitles">POSTS</h2>
+      <p style="margin-top: 10px; text-align: center">
+        Here you can find a variety of posts and articles written by our members. Whether you're looking for inspiration, 
+        practical advice, or simply want to connect with others who share your interests, you'll find it all here.
+      </p>
+        <div id="post1" align="center" style="margin-top: 30px;">
+          <div style="
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 30px;
+            margin: 30px 40px;
+            border-radius: 12px;
+            max-width: 90%;
+            text-align: left;
+            line-height: 2;
+            font-size: 110%;
+          ">
+            <h1 style="text-align:center;">The Journey from Confusion to Clarity</h1>
+
+            <p style="text-align:center; font-style: italic;">
+              “I’ve changed my mind so many times, about what I want to do in life.”
+            </p>
+
+            <div style="display: flex; justify-content: center;">
+              <img src="static/find-essence-among-empty-information-600nw-2548254589.jpg" alt="post1 image" style="width:100%; max-width:500px; height:auto; border-radius:10px; margin: 20px auto;">
+            </div>
+
+            <!-- Blog Preview -->
+            <div id="blogPreview">
+              <p>I remember looking back at my past and realising how confused I’ve been at different stages of life.</p>
+
+              <p>Sometimes when I read my old messages, emails, or random things I wrote back then...</p>
+
+              <p>I feel there’s such a big difference in how I felt then and how I feel now.</p>
+
+              <p>When I was a kid, I had these wild dreams of saving people, protecting them, sacrificing my life for the people of my kingdom.</p>
+
+              <p>It sounds funny now, but it was real for me back then.</p>
+
+              <p>This dream stayed with me all the way till secondary school.</p>
+
+              <p>After that, I stopped dreaming that big in the same way.</p>
+
+              <p>But that desire to serve people never really left.</p>
+
+              <p>So I thought maybe I should join the army.</p>
+
+              <p>Then I thought, maybe I could become a doctor and save lives.</p>
+
+              <p>But as I grew up, I started understanding more about how the world really works.</p>
+            </div>
+
+            <!-- Full Blog Content (Hidden by Default) -->
+            <div id="blogFull" style="display: none;">
+              <p>Around the age of 10 to 12, I got really fascinated with science.</p>
+
+              <p>I admired A.P.J Abdul Kalam and everything he did for India’s space journey.</p>
+
+              <p>I used to look up at the night sky and wonder what’s out there.</p>
+
+              <p>I’d read about space, rockets, satellites — anything I could find.</p>
+
+              <p>By 14 or 15, Mission Mangalyaan had just happened and I wished I could become a space scientist.</p>
+
+              <p>So I started doing research on what it would take.</p>
+
+              <p>But even before that, by 13, I had already decided I wanted to be an engineer.</p>
+
+              <p>That became my main goal. And yes, I ended up actually pursuing it.</p>
+
+              <p>But deep down, there was another dream too — I wanted to be a lawyer.</p>
+
+              <p>More specifically, a public prosecutor.</p>
+
+              <p>I thought I could fight for justice, help people who can’t afford a lawyer.</p>
+
+              <p>That dream still lives in me. And I really hope I find a way to make that one happen too.</p>
+
+              <p>After my 10th, I knew I had to take science if I wanted to do engineering.</p>
+
+              <p>And there was one thing I was super clear about — I hated Biology with all my heart. 😂</p>
+
+              <p>We had to take a career test in school and it said I had the aptitude to be a doctor.</p>
+
+              <p>But I told my teacher straight: “I hate Bio. I’m dropping it.”</p>
+
+              <p>And that’s exactly what I did. I took PCM with Computer Science instead.</p>
+
+              <p>But then came 11th and 12th... And boom — confusion again. What do I do next?</p>
+
+              <p>What do I do next?</p>
+
+              <p>I was still thinking about engineering, but I wanted to know more options.</p>
+
+              <p>So I started researching everything possible.</p>
+
+              <p>After months of reading, here’s what I found:</p>
+
+              <p>In engineering, the top colleges in India are IIT, NIT, BITS.</p>
+
+              <p>Abroad, it’s the Ivy Leagues — like MIT, Harvard, etc.</p>
+
+              <p>I looked into JEE-Mains, JEE-Advanced, BITSAT, SAT, TOEFL, IELTS...</p>
+
+              <p>Then I checked the fees.</p>
+
+              <p>And bro... they were insane. 😂</p>
+
+              <p>I checked financial aid options too.</p>
+
+              <p>Some colleges had scholarships, but not much.</p>
+
+              <p>And to get in, I needed something big — like international Olympiads.</p>
+
+              <p>That’s when I thought:<br>
+              "If someone told me this earlier, things would’ve been so much easier."</p>
+
+              <p>So I dropped the idea of studying abroad.</p>
+
+              <p>I then focused on JEE-Mains and aimed for NIT.</p>
+
+              <p>Didn’t get in.</p>
+
+              <p>Looked at BITS, but when I saw that ₹18 Lakh fee... I was like, “No way.”</p>
+
+              <p>It was mostly because of the placements.</p>
+
+              <p>My parents said I could take a student loan.</p>
+
+              <p>And I knew even if I got into IIT or NIT, loan was still going to be a thing.</p>
+
+              <p>Now that I think about it — thank God I didn’t get in.</p>
+
+              <p>(I’ll explain why in a later blog. So stick around.)</p>
+
+              <p>Then I looked at CLAT and law again.</p>
+
+              <p>But people said there’s no good pay or job security unless you get into a top law school or have good connections.</p>
+
+              <p>So I dropped that too.</p>
+
+              <p>Next, I thought of joining NDA and getting into the army.</p>
+
+              <p>But then I found out something that shook me —</p>
+
+              <p>If a cadet gets injured during training, NDA doesn’t take full responsibility.</p>
+
+              <p>And honestly, that made me lose respect for how India treats its soldiers.</p>
+
+              <p>Compared to the US, it felt like we were way behind.</p>
+
+              <p>So that plan also ended there.</p>
+
+              <p>Then I looked into government jobs.</p>
+
+              <p>Checked out SSC-CGL, Bank PO, Railway exams...</p>
+
+              <p>I learned how the jobs are divided by groups, how the pay scale works, what’s permanent, what’s transferable...</p>
+
+              <p>And finally, out of all of that, I saw one clear option —</p>
+
+              <p>Software engineers were killing it.</p>
+
+              <p>People were getting 25 LPA, 40 LPA, even 1 Cr packages.</p>
+
+              <p>And who doesn’t want that?</p>
+
+              <p>I was crazy about working at places like Google and Microsoft.</p>
+
+              <p>Since I was decent at coding, I thought I could give it a try.</p>
+
+              <p>And now, with these 4 years of college almost coming to an end...</p>
+
+              <p>I can honestly say — a lot changed.</p>
+
+              <p>The tech world changed.</p>
+
+              <p>College life wasn’t what I expected at all.</p>
+
+              <p>And the real world hit harder than I imagined.</p>
+
+              <p>But I didn’t let that stop me.</p>
+
+              <p>Because somewhere in the middle of all this confusion,</p>
+
+              <p>I found a bit of clarity.</p>
+
+              <p>A new goal.</p>
+
+              <p>Something that finally feels right.</p>
+
+              <p>Feels like me.</p>
+
+              <p>And now... I’ve slowly started working on it.</p>
+
+              <p>If you’ve ever felt lost or confused like this,</p>
+
+              <p>you can share it in the comments.</p>
+
+              <p>And if you’re still figuring things out — that’s totally okay.</p>
+
+              <p>You’re not alone :)</p>
+
+              <p>More soon,<br>– Vancy</p>
+
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div style="margin-top: 20px;">
+              <button onclick="toggleBlog(true)" id="readMoreBtn" style="
+                background-color: #ffcc00;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+              ">Read more...</button>
+
+              <button onclick="toggleBlog(false)" id="showLessBtn" style="
+                display: none;
+                background-color: #ccc;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                border-radius: 5px;
+                margin-top: 10px;
+                cursor: pointer;
+              ">Show less</button>
+            </div>
+          </div>
+        </div>
+
+        
+
+    <!-- Books Section in book template-->
+      <div id="books" class="section" style="background-color:white">
+         <h2 class="subtitles">BOOKS</h2>
+         <p align="center"> Here's some of the top  books that you may not want to miss.</p>
+         <br>
+         <div align="center">
+          {% for book in books %}
+             {% include 'book_template.html' %}
+            {% endfor %}
+         </div>
+
+       </div>
+
+      </div>
+
+    <!-- Join Section -->
+    <div id="join" class="section">
+      <h2 class="subtitles">JOIN NOW</h2>
+      <p>
+        Subscribe to the newsletter for weekly inspiration</p>
+      
+      <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit" id="subscribeBtn">Subscribe</button>
+        <div id="successMessage">Successfully subscribed!</div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 The Becoming League. All rights reserved.</p>
+    </footer>
+  </div>
+  </div>
+  <!-- JS -->
+  <script>
+    const form = document.getElementById("subscribeForm");
+    const button = document.getElementById("subscribeBtn");
+    const message = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      button.classList.add("clicked");
+      button.disabled = true;
+      message.style.display = "block";
+    });
+    function toggleBlog(expand) {
+      const full = document.getElementById("blogFull");
+      const preview = document.getElementById("blogPreview");
+      const readMoreBtn = document.getElementById("readMoreBtn");
+      const showLessBtn = document.getElementById("showLessBtn");
+
+      if (expand) {
+        full.style.display = "block";
+        readMoreBtn.style.display = "none";
+        showLessBtn.style.display = "inline-block";
+      } else {
+        full.style.display = "none";
+        readMoreBtn.style.display = "inline-block";
+        showLessBtn.style.display = "none";
+        window.scrollTo({ top: document.getElementById("post1").offsetTop - 100, behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
