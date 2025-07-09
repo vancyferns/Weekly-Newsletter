@@ -1,0 +1,13 @@
+modules = ["python-3.12"]
+run = "python app.py"
+
+[nix]
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
