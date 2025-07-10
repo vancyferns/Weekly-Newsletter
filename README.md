@@ -2,7 +2,7 @@
 
 A dynamic Weekly Newsletter Blog application built using Flask, HTML, CSS, and JavaScript, designed to collect and manage newsletter subscriptions with a modern, responsive UI.
 
-📖 About
+<h2>📖 About</h2>
 A Weekly Newsletter Blog web application for collecting and managing newsletter subscriptions.
 
 Built using Flask for backend development.
@@ -19,53 +19,59 @@ MySQL Workbench used for database design, table creation, and queries.
 
 Application deployed using Render for live hosting and scalability.
 
-🚀 Features
-Clean and responsive front-end interface
+<h2>🚀 Features</h2>
+<ul>
+  <li>Clean and responsive front-end interface</li>
 
-Real-time email subscription form
+<li>Real-time email subscription form</li>
 
-Validates and stores emails securely in a MySQL database
+<li>Validates and stores emails securely in a MySQL database</li>
 
-Cloud-based database and deployment for easy scalability
+<li>Cloud-based database and deployment for easy scalability</li>
+</ul>
+
 
 🛠 Tech Stack
-Backend: Python, Flask (routing, server logic, template rendering)
+<ul></ul>
+<li>Backend: Python, Flask (routing, server logic, template rendering)</li>
 
-Frontend: HTML5, CSS3, JavaScript (UI/UX and interactivity)
+<li>Frontend: HTML5, CSS3, JavaScript (UI/UX and interactivity)</li>
 
-Database: MySQL (Cloud hosted via Avien)
+<li>Database: MySQL (Cloud hosted via Avien)</li>
 
-Database Management: MySQL Workbench
+<li>Database Management: MySQL Workbench</li>
 
-Version Control: Git (with GitHub for collaboration)
+<li>Version Control: Git (with GitHub for collaboration)</li>
 
-Development Environment: Replit
+<li>Development Environment: Replit</li>
 
-Deployment: Render (for hosting the live Flask application)
+<li>Deployment: Render (for hosting the live Flask application)</li>
 
-📦 Key Functionalities
-Simple and user-friendly newsletter subscription form
+<h2>📦 Key Functionalities</h2>
+<ol>
+<li>Simple and user-friendly newsletter subscription form</li>
 
-Real-time input validation
+<li>Real-time input validation</li>
 
-Email addresses stored securely in a email_list table with id and email fields
+<li>Email addresses stored securely in a email_list table with id and email fields</li>
 
-Scalable structure ready for:
+<li>Scalable structure ready for:
+<ul>
+  <li>Admin dashboard integration</li>
+   <li>Email sending system</li>
+  <li>Third-party service integration (e.g., Mailchimp, SMTP)</li>
+   <li>Newsletter subscription form</li>
+</ul>
 
-Admin dashboard integration
+<li>Email validation and duplicate check</li>
 
-Email sending system
+<li>Automatic storage in cloud MySQL table email_list (with fields: id, email)</li>
 
-Third-party service integration (e.g., Mailchimp, SMTP)
-Newsletter subscription form
+<li>Ready for scaling and additional features like authentication, newsletter publishing, etc.</li>
+</ol>
 
-Email validation and duplicate check
 
-Automatic storage in cloud MySQL table email_list (with fields: id, email)
-
-Ready for scaling and additional features like authentication, newsletter publishing, etc.
-
-✅ Future Improvements:
+<h2>✅ Future Improvements:</h2>
 Admin dashboard to view and manage subscribers
 
 Scheduled newsletter delivery system
