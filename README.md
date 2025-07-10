@@ -1,4 +1,5 @@
-#📰 Weekly Newsletter Blog
+<h1>Weekly Newsletter Blog</h1>
+
 A dynamic Weekly Newsletter Blog application built using Flask, HTML, CSS, and JavaScript, designed to collect and manage newsletter subscriptions with a modern, responsive UI.
 
 📖 About
