@@ -34,18 +34,6 @@ Automatic storage in cloud MySQL table email_list (with fields: id, email)
 
 Ready for scaling and additional features like authentication, newsletter publishing, etc.
 
-📁 Folder Structure:
-bash
-Copy
-Edit
-/project-root
-├── static/               # CSS and JS files
-├── templates/            # HTML templates (Jinja2)
-├── database.py           # MySQL connection logic
-├── main.py               # Flask app routes
-├── schema.sql            # SQL schema for creating `email_list` table
-├── requirements.txt      # Python dependencies
-└── README.md             # Project overview
 ✅ Future Improvements:
 Admin dashboard to view and manage subscribers
 
