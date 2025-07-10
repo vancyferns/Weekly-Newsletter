@@ -556,17 +556,22 @@
       </div>
 
     <!-- Join Section -->
-    <div id="join" class="section">
+        <!-- Join Section -->
+    <div id="join" class="section" data-success="{{ 'true' if success else 'false' }}">
       <h2 class="subtitles">JOIN NOW</h2>
-      <p>
-        Subscribe to the newsletter for weekly inspiration</p>
-      
-      <form id="subscribeForm">
-        <input type="email" id="email" placeholder="Enter your email" required />
+      <p>Subscribe to the newsletter for weekly inspiration</p>
+
+      <form id="subscribeForm" action="/" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit" id="subscribeBtn">Subscribe</button>
-        <div id="successMessage">Successfully subscribed!</div>
       </form>
+
+      <div id="successMessage" style="display:none; color: green; font-weight: bold;">
+        Successfully subscribed!
+      </div>
     </div>
+
+
 
     <!-- Footer -->
     <footer>
@@ -576,16 +581,20 @@
   </div>
   <!-- JS -->
   <script>
-    const form = document.getElementById("subscribeForm");
-    const button = document.getElementById("subscribeBtn");
-    const message = document.getElementById("successMessage");
+    document.addEventListener("DOMContentLoaded", () => {
+      const joinSection = document.getElementById("join");
+      const success = joinSection.dataset.success;
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      button.classList.add("clicked");
-      button.disabled = true;
-      message.style.display = "block";
+      if (success === "true") {
+        const successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 10000);
+      }
     });
+
     function toggleBlog(expand) {
       const full = document.getElementById("blogFull");
       const preview = document.getElementById("blogPreview");

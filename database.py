@@ -18,10 +18,11 @@ def load_books():
         books = [dict(row) for row in result_all]
         return books
 
-# Function to load email list
-def load_email_list():
+def add_email_to_email_list(email):
     with engine.connect() as conn:
-        result = conn.execute(text("SELECT * FROM email_list"))
-        result_all = result.mappings().all()
-        emails = [dict(row) for row in result_all]
-        return emails
+        query = text("INSERT INTO email_list (email) VALUES (:Email)")
+        conn.execute(query, {"Email": email})
+        conn.commit()  # <-- This is needed
+
+
+        
